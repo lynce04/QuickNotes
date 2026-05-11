@@ -12,7 +12,7 @@ A web-based notes app inspired by the iPhone Notes layout, built with a C# backe
 | Layer | Technology |
 |---|---|
 | Backend | C# / ASP.NET Core Web API |
-| Frontend | HTML, CSS, JavaScript, Bootstrap 5 |
+  | Frontend | HTML, CSS, JavaScript, Bootstrap 5 |
 | Database | SQLite via Entity Framework Core |
 | Versioning | Git / GitHub |
 
