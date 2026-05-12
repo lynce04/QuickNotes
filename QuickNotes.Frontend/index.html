@@ -35,23 +35,33 @@
 
         <div id="themePanel" class="border-top p-3">
           <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-            <label>Color</label>
-            <input type="color" id="colorPicker">
-            <label>Image</label>
-            <input type="file" id="imagePicker" accept="image/*">
-            <button id="resetBtn" type="button">Reset</button>
+            <div>
 
-            <label>Size</label>
-            <input type="range" id="fontSizeSlider" min="12"  max="24" value="15">
+              <label>Color</label>
+              <input type="color" id="colorPicker">
+            </div>
 
-            <label>Font</label>
-            <select id="fontFamilyPicker">
-              <option value="sans-serif">Sans-serif</option>
-              <option value="serif">Serif</option>
-              <option value="monospace">Monospace</option>
-              <option value="cursive">Cursive</option>
-            </select>
+            <div>
+              <label>Image</label>
+              <input type="file" id="imagePicker" accept="image/*">
+            </div>
 
+            <div>
+              <label>Size</label>
+              <input type="range" id="fontSizeSlider" min="12" max="24" value="15">
+            </div>
+
+            <div>
+              <label>Font</label>
+              <select id="fontFamilyPicker">
+                <option value="sans-serif">Sans-serif</option>
+                <option value="serif">Serif</option>
+                <option value="monospace">Monospace</option>
+                <option value="cursive">Cursive</option>
+              </select>
+            </div>
+
+                <button id="resetBtn" type="button">Reset</button>
           </div>
         </div>
 
