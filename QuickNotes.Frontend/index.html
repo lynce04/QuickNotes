@@ -12,9 +12,9 @@
 
 <body>
   <div class="container-fluid vh-100 p-0 ">
-    <div class="row g-0 h-100">
+    <div class="row g-0 h-100" id="mainRow">
 
-      <div class="col-12 col-md-4" id="sidebar">
+      <div  id="sidebar">
         <div class="p-3">
           <h4> QuickNotes </h4>
 
@@ -67,7 +67,9 @@
 
       </div>
 
-      <div class="col-12 col-md-8" id="editor">
+
+      <div id = "resizer"></div>
+      <div id="editor">
         <div class="border-bottom p-3 card text-center  " id="editorInner">
           <small id="editorDate" class="text-body-tertiary"></small>
           <input id="editorTitle" placeholder="Title" class="border border-0 fs-1">
@@ -86,7 +88,6 @@
     </div>
 
   </div>
-
 
 
   <script src="app.js"></script>

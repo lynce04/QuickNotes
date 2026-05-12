@@ -9,6 +9,10 @@ body {
     border-right: 1px solid #ddd;
     display: flex;
     flex-direction:column;
+    width: 300px;
+    min-width: 150px;
+    max-width: 50%;
+    flex-shrink: 0;
 }
 
     
@@ -16,7 +20,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-
+    flex: 1;
 }
 
 body{
@@ -98,3 +102,39 @@ body{
     font-size: var(--title-font-size);
     font-family: var(--note-font-family);
 }
+
+#resizer{
+    width: 5px;
+    background-color: #ddd;
+    cursor: col-resize;
+    position: relative;
+    z-index: 1;
+}
+
+#mainRow{
+    display: flex;
+    flex-direction: row;    
+    height: 100vh;
+    width: 100%;
+}
+
+/*
+@media (max-width: 768px) {
+    #mainRow {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    #resizer {
+        display: none;
+    }
+
+    #editor {
+        width: 100%;
+    }
+
+}*/
