@@ -171,6 +171,27 @@ function changeFontFamily(e) {
     document.body.style.setProperty("--note-font-family", e.target.value);
 }
 
+const resizer = document.getElementById("resizer");
+const sidebar = document.getElementById("sidebar");
+
+let isResizing = false;
+
+resizer.addEventListener("mousedown", function(e) {
+    isResizing = true;
+});
+
+document.addEventListener("mousemove", function(e) {
+    if (!isResizing) return;
+    const newWidth = e.clientX;
+    if (newWidth > 150 && newWidth < window.innerWidth / 2) {
+        sidebar.style.width = newWidth + "px";
+    }
+});
+
+document.addEventListener("mouseup", function() {
+    isResizing = false;
+});
+
 document.getElementById("fontSizeSlider").addEventListener("input", changeFontSize);
 document.getElementById("fontFamilyPicker").addEventListener("change", changeFontFamily);
 document.getElementById("colorPicker").addEventListener("input", changeBgColor);
