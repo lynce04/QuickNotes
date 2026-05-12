@@ -23,7 +23,6 @@ async function loadNotes() {
 
   }
 
-
 }
 
 //changes the notes fron Db to a list that can be showed on the sidebar.
@@ -182,6 +181,7 @@ resizer.addEventListener("mousedown", function(e) {
 
 document.addEventListener("mousemove", function(e) {
     if (!isResizing) return;
+    if (window.innerWidth <= 768) return;
     const newWidth = e.clientX;
     if (newWidth > 150 && newWidth < window.innerWidth / 2) {
         sidebar.style.width = newWidth + "px";
@@ -190,6 +190,12 @@ document.addEventListener("mousemove", function(e) {
 
 document.addEventListener("mouseup", function() {
     isResizing = false;
+});
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth <= 768) {
+        sidebar.style.width = "";
+    }
 });
 
 document.getElementById("fontSizeSlider").addEventListener("input", changeFontSize);

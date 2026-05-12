@@ -1,73 +1,74 @@
 body {
-    --note-font-size: 15px;      
+    --note-font-size: 15px;
     --note-font-family: sans-serif;
-    --title-font-size: 20px;     
+    --title-font-size: 20px;
 }
 
 #sidebar {
     background-color: #f5f5f0;
     border-right: 1px solid #ddd;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     width: 300px;
     min-width: 150px;
     max-width: 50%;
     flex-shrink: 0;
 }
 
-    
-#editor{
+
+#editor {
     background-color: white;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-body{
-    overflow-x:hidden;
+body {
+    overflow-x: hidden;
     font-family: sans-serif;
 }
-#noteList{
+
+#noteList {
     flex-grow: 1;
-    overflow-y:auto;
+    overflow-y: auto;
 
 }
 
-#editorTitle{
+#editorTitle {
     outline: none;
-    width : 100%;
-    background:transparent;
+    width: 100%;
+    background: transparent;
 }
 
-#editorInner{
+#editorInner {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.note-item{
+.note-item {
     padding: 10px 14px;
     cursor: pointer;
     border-left: 3px solid transparent;
 }
 
-.note-item.active{
+.note-item.active {
     background-color: white;
     border-left-color: #ef9f27;
 }
 
-#themePanel{
+#themePanel {
     display: none;
 }
 
-#resetBtn{
-    background-color:rgb(223, 250, 175);
+#resetBtn {
+    background-color: rgb(223, 250, 175);
     border-radius: 6px;
-    border : none;
+    border: none;
 }
 
-#themeBtn{
-    background-color:rgb(250, 228, 200);
+#themeBtn {
+    background-color: rgb(250, 228, 200);
     cursor: pointer;
     border: none;
     border-radius: 4px;
@@ -80,10 +81,10 @@ body{
 
 .note-preview {
     font-size: var(--note-font-size);
-    color:gray;
-    margin-top:2px;
+    color: gray;
+    margin-top: 2px;
     white-space: nowrap;
-    overflow:hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -91,7 +92,7 @@ body{
 #editorBody {
     resize: none;
     flex-grow: 1;
-    outline:none;
+    outline: none;
     line-height: 1.7;
     font-size: var(--note-font-size);
     font-family: var(--note-font-family);
@@ -103,7 +104,7 @@ body{
     font-family: var(--note-font-family);
 }
 
-#resizer{
+#resizer {
     width: 5px;
     background-color: #ddd;
     cursor: col-resize;
@@ -111,22 +112,21 @@ body{
     z-index: 1;
 }
 
-#mainRow{
+#mainRow {
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     height: 100vh;
     width: 100%;
 }
 
-/*
 @media (max-width: 768px) {
     #mainRow {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     #sidebar {
-        width: 100% !important;
-        max-width: 100%;
+        width: 45% ;
+        min-width: 120px;
     }
 
     #resizer {
@@ -134,7 +134,11 @@ body{
     }
 
     #editor {
-        width: 100%;
+        flex: 1;
     }
 
-}*/
+    #sidebar-footer {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
