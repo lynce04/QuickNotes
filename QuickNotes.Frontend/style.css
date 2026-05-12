@@ -72,3 +72,11 @@ body{
 #resetBtn{
     background-color:darkolivegreen;
 }
+
+#themeBtn{
+    background-color:rgb(250, 228, 200);
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+
+}

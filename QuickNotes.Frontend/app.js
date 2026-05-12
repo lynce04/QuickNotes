@@ -138,6 +138,7 @@ function toggleFunction() {
     themePanel.style.display = "block";
   }
 }
+
 function changeBgColor(event) {
   const chosenColor = event.target.value;
   document.getElementById("sidebar").style.backgroundColor = chosenColor;
@@ -159,6 +160,19 @@ function resetTheme(){
   document.getElementById("sidebar").style.backgroundImage = "none";
 }
 
+function changeFontSize(e) {
+    const contentSize = e.target.value;
+    const titleSize = parseInt(contentSize) + 5;
+    document.body.style.setProperty("--note-font-size", contentSize + "px");
+    document.body.style.setProperty("--title-font-size", titleSize + "px");
+}
+
+function changeFontFamily(e) {
+    document.body.style.setProperty("--note-font-family", e.target.value);
+}
+
+document.getElementById("fontSizeSlider").addEventListener("input", changeFontSize);
+document.getElementById("fontFamilyPicker").addEventListener("change", changeFontFamily);
 document.getElementById("colorPicker").addEventListener("input", changeBgColor);
 document.getElementById("imagePicker").addEventListener("change", changeBgImage);
 document.getElementById("resetBtn").addEventListener("click", resetTheme );
